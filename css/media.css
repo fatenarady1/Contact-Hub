@@ -1,0 +1,96 @@
+
+
+   /* sm */
+   @media  screen and (min-width: 640px) {
+         
+ 
+
+        
+            nav{
+
+               gap: 12px;
+    
+
+               .left-part .rightPart h3{
+
+                  font-size: 24px;
+               }
+
+               .left-part .rightPart p{
+
+                  font-size: 12px;
+              }
+
+              
+
+               .navbar-collapse ul .addContact {
+
+                  padding: 10px 20px;
+            }  
+
+            .navbar-collapse ul li .user-img {
+
+               width: 40px;
+               height: 40px;
+           }
+
+           .navbar-collapse ul {
+            gap: 12px;
+        }
+        
+
+            }
+
+
+            section{
+           
+                  
+                  padding-top: 32px;
+                  padding-bottom: 32px;
+
+                  .counting .counting-content {
+
+                     gap: 16px;
+                  }
+
+              
+            }
+
+         #main-section  h1 {
+            font-size: 30px;
+         }
+
+      
+      
+   
+    
+  }
+  
+  
+  /* md */
+  @media  screen and (min-width: 768px) { 
+    
+  
+  }
+
+
+
+  
+  /* lg */
+  @media  screen and (min-width: 1024px) {
+  
+  
+        
+  }  
+  
+  /* xl */
+  @media  screen and (min-width: 1280px) {
+  }
+  
+  
+  
+  
+  /* xxl */
+  @media  screen and (min-width: 1536px) {
+      
+  }
