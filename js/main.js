@@ -1,23 +1,23 @@
 
-var fullName = document.getElementById("name");
-var phoneNumber = document.getElementById("phone");
-var email = document.getElementById("email");
-var address = document.getElementById("address");
-var group = document.getElementById("group");
-var notes = document.getElementById("floatingTextarea");
-var favorite = document.getElementById("favorite");
-var emergency = document.getElementById("emergency");
-var search = document.getElementById("search");
+let fullName = document.getElementById("name");
+let phoneNumber = document.getElementById("phone");
+let email = document.getElementById("email");
+let address = document.getElementById("address");
+let group = document.getElementById("group");
+let notes = document.getElementById("floatingTextarea");
+let favorite = document.getElementById("favorite");
+let emergency = document.getElementById("emergency");
+let search = document.getElementById("search");
 
-var modal = document.getElementById("contactModal");
+let modal = document.getElementById("contactModal");
 
 
-var total = document.getElementById("total");
-var fav = document.getElementById("fav");
-var eme = document.getElementById("emergen");
+let total = document.getElementById("total");
+let fav = document.getElementById("fav");
+let eme = document.getElementById("emergen");
   
 
-var numberList= [];
+let numberList= [];
 
 if(localStorage.getItem("numbers")!= null){
 numberList= JSON.parse(localStorage.getItem("numbers"));
@@ -26,9 +26,9 @@ numberList= JSON.parse(localStorage.getItem("numbers"));
 
 
 
-// var favContacts=[];
+// let favContacts=[];
 // if(localStorage.getItem("favourites")!= null){
-//       favContacts = JSON.parse(localStorage.getItem("favourites"));
++//       favContacts = JSON.parse(localStorage.getItem("favourites"));
 //       displayFavorites(i);
 // }
 
@@ -38,7 +38,7 @@ numberList= JSON.parse(localStorage.getItem("numbers"));
 function addNumber(){
 
 
-  var person={
+  let person={
       name: fullName.value,
       phone: phoneNumber.value,
       email: email.value,
@@ -91,12 +91,12 @@ function deletePeron(i) {
 
 
 function handleSearch(){
-  var temp='';
+  let temp='';
 
   // debounce
   setTimeout(()=>{
 
-    for(var i =0; i< numberList.length; i++){
+    for(let i =0; i< numberList.length; i++){
       if(numberList[i].name.toLowerCase().includes(search.value.toLowerCase())){
        
         temp+=  `<div class="person col-12 col-md-6 ">
@@ -182,12 +182,12 @@ function handleSearch(){
 
 
 
-  //  var displayfav=""; 
+  //  let displayfav=""; 
 
   //  function addFavorites(){
-  //   var countFav= 0;
+  //   let countFav= 0;
 
-  //   for(var i =0; i<favContacts.length; i++){
+  //   for(let i =0; i<favContacts.length; i++){
 
 
   //     if(numberList[i].favorite){
@@ -208,7 +208,7 @@ function handleSearch(){
 
 //   function  displayFavorites(){
     
-//      for(var i =0; i<favContacts.length; i++){
+//      for(let i =0; i<favContacts.length; i++){
 
 
      
@@ -234,15 +234,15 @@ function handleSearch(){
     
 //   }
 
-//   var emeContacts= [];
+//   let emeContacts= [];
 
 //   if(localStorage.getItem("emergencies")!= null){
 //     emeContacts = JSON.parse(localStorage.getItem("emergencies"));
 //     displayEmergencies(i);
 // }
-// var displayeme=""; 
+// let displayeme=""; 
 // function  displayEmergencies(i){
-//  for(var i =0; i<emeContacts.length; i++){
+//  for(let i =0; i<emeContacts.length; i++){
   
 //       displayeme+= `    
 //       <!-- List Item Template --> 
@@ -268,20 +268,20 @@ function handleSearch(){
 
 function displayPersons(){
 
-  var countFav = 0;
-  var countEmergency = 0;
-  var temp="";
+  let countFav = 0;
+  let countEmergency = 0;
+  let temp="";
    if(numberList.length===0){
-    temp+=`
+    temp+= `
      <p class="alert alert-danger text-center w-100">No contacts found</p> 
 `   
 
    }
    
 
-  var displayfav=""; 
-  var displayeme="";
-    for(var i =0; i<numberList.length; i++){
+  let displayfav=""; 
+  let displayeme="";
+    for(let i =0; i<numberList.length; i++){
       
 
       if(numberList[i].favorite){
@@ -375,8 +375,8 @@ function displayPersons(){
      </div>
 
       <div class="groupAemergency d-flex gap-2 mb-2">
-          <span  class="fw-medium text-capitalize">${numberList[i].group}</span>
-          ${numberList[i].emergency? '<span class="tag bg-danger text-white px-2 rounded-2 emergency"><i class="fas fa-heartbeat"></i> Emergency</span>':""}
+          <span  class=" group fw-medium text-capitalize">${numberList[i].group}</span>
+          ${numberList[i].emergency? '<span class="tag d-flex align-items-center px-2 rounded-2 emergency"><i class="fas fa-heartbeat"></i> Emergency</span>':""}
 
       </div>
 
@@ -437,15 +437,15 @@ function clear(){
 function  closeModal(){
 
   clear()
-  var modalObj = bootstrap.Modal.getInstance(modal);
+  let modalObj = bootstrap.Modal.getInstance(modal);
   modalObj.hide();
 }
 
 
 
-let obg ={
-  title: "fate",
+// let obg ={
+//   title: "fate",
 
-}
-let obj2= {...obg};
-console.log(obj2);
+// }
+// let obj2= {...obg};
+// console.log(obj2);
