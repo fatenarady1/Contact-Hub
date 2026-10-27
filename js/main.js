@@ -440,3 +440,12 @@ function  closeModal(){
   var modalObj = bootstrap.Modal.getInstance(modal);
   modalObj.hide();
 }
+
+
+
+let obg ={
+  title: "fate",
+
+}
+let obj2= {...obg};
+console.log(obj2);
